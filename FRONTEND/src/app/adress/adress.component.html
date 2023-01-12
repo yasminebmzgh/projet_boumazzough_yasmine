@@ -1,0 +1,22 @@
+Adresses déjà enregistrées
+<table>
+    <thead>
+        <tr>
+            <th>Rue</th>
+            <th>Ville</th>
+            <th>Code postal</th>
+            <th>Pays</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let adress of adresses">
+            <td>{{adress.street}}</td>
+            <td><button (click) = "removeAdress(adress)">Supprimer l'adresse</button></td>
+        </tr>
+    </tbody>
+</table>
+
+
+Ajouter une adresse
+<input type="text" [(ngModel)]="streetInput"  name="street" placeholder="Rue"/>
+<button (click) =  "addAdress()">Valider la création de l'adresse</button>
